@@ -1,18 +1,12 @@
-let array = [0, 0, 0, 0, 0, 0]
+let array = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 
 var removeDuplicates = function (nums) {
-    let n = nums.length;
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
-            if (nums[i] == nums[j] && i != j) {
-                nums[j] = " ";
-                var dup = nums.indexOf(" ");
-                console.log(String(dup))
-                nums.splice(dup, 1);
-            }
+    let ans = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] != nums[i + 1]) {
+            ans.push(nums[i])
         }
     }
-
-    console.log(nums)
+    return ans;
 };
-removeDuplicates(array)
+console.log(removeDuplicates(array))

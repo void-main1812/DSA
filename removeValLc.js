@@ -1,12 +1,14 @@
-let array = [0, 1, 2, 2, 3, 0, 4, 2]
-let value = 2;
-let ans = [];
-for(let i = 0; i< array.length; i++)
-{
-    let j = 0;
-    if(array[i] != value)
-    {
-        ans[j++] = array[i]; 
+let array = [3, 2, 2, 3]
+let value = 3;
+var removeElement = function (nums, val) {
+    let length = nums.length
+    let ans = [];
+    for (let i = 0; i < length; i++) {
+        if (nums[i] != val) {
+            ans.push(nums[i]);
+        }
     }
-}
-console.log(ans)
+
+    return ans;
+}  
+console.log(removeElement(array, value))
